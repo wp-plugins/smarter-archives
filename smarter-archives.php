@@ -7,7 +7,7 @@
 	Author URI: http://robinadr.com/
 
 	Description: Easy, simple, and intuitive way to access archives via months, broken down by year.
-	Version: 3.2
+	Version: 3.2.1
 	Text Domain: smarter-archives
 
 	Copyright (c) 2014 Robin Adrianse; see license.txt for full license
@@ -79,6 +79,7 @@ function smarter_archives( $args = '' )
 		__( 'Jul', 'smarter-archives' ), __( 'Aug', 'smarter-archives' ), __( 'Sep', 'smarter-archives' ),
 		__( 'Oct', 'smarter-archives' ), __( 'Nov', 'smarter-archives' ), __( 'Dec', 'smarter-archives' )
 	);
+	unset( $month_names[0] );
 	$month_names = apply_filters( 'smarter_archives_months', $month_names );
 
 	$output = '<' . _smarter_archives_tag( $wrapper_tag, $wrapper_class ) . ">\n";
